@@ -5,12 +5,18 @@ export const PostStyled = styled.a`
 	align-items: center;
 	cursor: pointer;
 	min-height: 40px;
-	padding: 8px;
 	width: 100%;
 	max-width: 500px;
 	font-size: 16px;
 	text-decoration: none;
 	color: #000;
 	margin-bottom: 32px;
-	border: 1px solid #000;
+`;
+export const PostIcon = styled.div`
+	background-image: url(${(props) => props.imgUrl});
+	background-position: center center;
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	margin-right: 16px;
 `;

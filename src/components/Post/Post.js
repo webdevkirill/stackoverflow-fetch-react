@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostStyled } from './PostStyled';
+import { PostIcon, PostStyled } from './PostStyled';
 
 export default function Post({ post }) {
 	const {
@@ -7,5 +7,10 @@ export default function Post({ post }) {
 		owner: { profile_image = '' },
 		title,
 	} = post;
-	return <PostStyled href={link}>{title}</PostStyled>;
+	return (
+		<PostStyled href={link}>
+			{profile_image && <PostIcon imgUrl={profile_image} />}
+			{title}
+		</PostStyled>
+	);
 }
