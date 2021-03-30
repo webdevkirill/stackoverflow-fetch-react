@@ -5,6 +5,7 @@ import './App.css';
 import PostList from './components/PostList/PostList';
 import { posts } from './posts';
 import { SortingChangeButton } from './components/SortingChangeButton';
+import { AppWrapper } from './components/AppWrapper';
 
 const mockPosts = posts.items;
 
@@ -26,12 +27,14 @@ function App() {
 
 	return (
 		<div className='App'>
-			<SortingChangeButton
-				onClick={() => setIsReverceSort((prevState) => !prevState)}
-			>
-				Изменить направление сортировки
-			</SortingChangeButton>
-			<PostList posts={mockPosts} isReverceSort={isReverceSort} />
+			<AppWrapper>
+				<SortingChangeButton
+					onClick={() => setIsReverceSort((prevState) => !prevState)}
+				>
+					Изменить направление сортировки
+				</SortingChangeButton>
+				<PostList posts={mockPosts} isReverceSort={isReverceSort} />
+			</AppWrapper>
 		</div>
 	);
 }
