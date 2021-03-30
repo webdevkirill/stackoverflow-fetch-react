@@ -10,7 +10,7 @@ export default function Post({ post }) {
 	return (
 		<PostStyled href={link}>
 			{profile_image && <PostIcon imgUrl={profile_image} />}
-			{title}
+			<span dangerouslySetInnerHTML={{ __html: title }} />
 		</PostStyled>
 	);
 }
