@@ -1,22 +1,30 @@
 import './App.css';
-import { useFetch } from './hooks/useFetch';
-import { Message } from './components/Message';
+// import { useFetch } from './hooks/useFetch';
+// import { Message } from './components/Message';
+import PostList from './components/PostList/PostList';
+import { posts } from './posts';
+
+const mockPosts = posts.items;
 
 function App() {
-	const url =
-		'https://api.stackexchange.com/2.2/search?intitle=react&site=stackoverflow';
+	// const url =
+	// 	'https://api.stackexchange.com/2.2/search?intitle=react&site=stackoverflow';
 
-	const { posts, isLoading, error } = useFetch(url);
+	// const { posts, isLoading, error } = useFetch(url);
 
-	if (isLoading) {
-		return <Message>Loading...</Message>;
-	}
+	// if (isLoading) {
+	// 	return <Message>Loading...</Message>;
+	// }
 
-	if (error) {
-		return <Message color='red'>Произошла ошибка: {error}</Message>;
-	}
+	// if (error) {
+	// 	return <Message color='red'>Произошла ошибка: {error}</Message>;
+	// }
 
-	return <div className='App'>Hello</div>;
+	return (
+		<div className='App'>
+			<PostList posts={mockPosts} />
+		</div>
+	);
 }
 
 export default App;
