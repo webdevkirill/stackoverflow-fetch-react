@@ -7,12 +7,15 @@ export const PostStyled = styled.a`
 	font-size: 16px;
 	text-decoration: none;
 	color: #000;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding-right: 8px;
 `;
 export const PostIcon = styled.div`
 	background-image: url(${(props) => props.imgUrl});
 	background-position: center center;
 	background-size: cover;
-	width: 40px;
+	min-width: 40px;
 	height: 40px;
 	margin-right: 16px;
 `;
