@@ -5,7 +5,15 @@ function App() {
 	const url =
 		'https://api.stackexchange.com/2.2/search?intitle=react&site=stackoverflow';
 
-	const { posts, isLoading } = useFetch(url);
+	const { posts, isLoading, error } = useFetch(url);
+
+	if (isLoading) {
+		return <p>Loading...</p>;
+	}
+
+	if (error) {
+		return <p>Произошла ошибка: {error}</p>;
+	}
 
 	return <div className='App'>Hello</div>;
 }
