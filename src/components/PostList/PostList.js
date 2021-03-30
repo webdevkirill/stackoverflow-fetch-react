@@ -1,6 +1,6 @@
 import React from 'react';
 import filter from 'lodash/filter';
-import { PostListStyled } from './PostListStyled';
+import { PostListItem, PostListStyled } from './PostListStyled';
 import Post from '../Post/Post';
 
 export default function PostList({ posts }) {
@@ -13,7 +13,9 @@ export default function PostList({ posts }) {
 		<div>
 			<PostListStyled>
 				{filteredPosts.map((post) => (
-					<Post key={post.question_id} post={post} />
+					<PostListItem key={post.question_id}>
+						<Post post={post} />
+					</PostListItem>
 				))}
 			</PostListStyled>
 		</div>
