@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SortingChangeButton = styled.button`
-	width: 280px;
+	width: 256px;
 	cursor: pointer;
 	margin-bottom: 16px;
 	padding: 16px;
