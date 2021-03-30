@@ -3,11 +3,8 @@ import './App.css';
 import { useFetch } from './hooks/useFetch';
 import { Message } from './components/Message';
 import PostList from './components/PostList/PostList';
-import { posts } from './posts';
 import { SortingChangeButton } from './components/SortingChangeButton';
 import { AppWrapper } from './components/AppWrapper';
-
-const mockPosts = posts.items;
 
 function App() {
 	const url =
