@@ -1,5 +1,6 @@
 import './App.css';
 import { useFetch } from './hooks/useFetch';
+import { Message } from './components/Message';
 
 function App() {
 	const url =
@@ -8,11 +9,11 @@ function App() {
 	const { posts, isLoading, error } = useFetch(url);
 
 	if (isLoading) {
-		return <p>Loading...</p>;
+		return <Message>Loading...</Message>;
 	}
 
 	if (error) {
-		return <p>Произошла ошибка: {error}</p>;
+		return <Message color='red'>Произошла ошибка: {error}</Message>;
 	}
 
 	return <div className='App'>Hello</div>;
